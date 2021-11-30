@@ -3,6 +3,10 @@ Project created for the need of Intive patronage 2022 internship.
 The interface language is Polish as well as the description of the project requirements listed below.
 
 
+
+======== PATRONAGE 2022 ========
+
+
 Twoje zadanie to przygotowanie aplikacji, która pozwala na rejestrację i logowanie użytkownika
 a zalogowanemu użytkownikowi wyświetla galerię zdjęć. Aplikacja powinna składać się z 4
 ekranów:
