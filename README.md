@@ -17,6 +17,7 @@ Do stworzenia aplikacji użyj czystego Javascript, HTML i CSS. Zewnętrzne bibli
 frameworki nie są dozwolone – nie używaj więc jQuery, Reacta, Boostrapa SCSS, lodash itp.
 
 Wymagania:
+
 • Ogólne
 o Formularz rejestracji składający się z pól „Nazwa użytkownika”, „Hasło, „Email”,
 „Potwierdź email” i przycisku „Zarejestruj”
@@ -44,10 +45,10 @@ o Po rejestracji, nowy użytkownik jest od razu zalogowany a zarejestrowani
 użytkownicy są przechowywani w przeglądarce tak, żeby można było
 zalogować się na wszystkie zarejestrowane konta, również po odświeżeniu
 strony
-
-© 2021 intive 2
 o Nazwa użytkownika musi być unikalna a na jeden adres email nie można
 założyć więcej niż jednego konta
+
+
 o Walidacja:
 ▪ pole „Email” musi mieć poprawny format adresu email,
 ▪ pole „Potwierdź email” musi mieć taką samą wartość jak „Email”,
@@ -56,15 +57,19 @@ dozwolone znaki to litery i cyfry,
 ▪ pole „Hasło” musi mieć co najmniej 6 znaków
 ▪ walidacja pól następuje po wciśnięciu przycisku „Zarejestruj”
 ▪ do walidacji możesz użyć własności HTML -
-https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+  https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
 
 o W tym widoku widoczny u góry jest tylko przycisk „Logowanie”
+
+
 • Logowanie
 o Sprawdź, czy użytkownik istnieje i czy hasło jest poprawne - jeśli nie, wyświetl
 stosowny błąd
 o Jeśli użytkownik jest zalogowany, to po odświeżeniu strony nadal pozostaje
 zalogowany
 o W tym widoku widoczny u góry jest tylko przycisk „Rejestracja”
+
+
 • Widok zalogowanego użytkownika
 o Zalogowany użytkownik widzi galerię obrazów w układzie siatki – użyj grid (
 https://developer.mozilla.org/pl/docs/Web/CSS/CSS_Grid_Layout )
@@ -85,15 +90,12 @@ nim, wybrane przez Ciebie metadane, np. tytuł lub autor zdjęcia
 o Dostosuj rozmiar kart w siatce tak, aby galeria dobrze wypełniała dostępne
 miejsce
 
-© 2021 intive 3
+
 Wymagania dodatkowe:
 Czyli bonusowe punkty za bonusowe funkcjonalności. Możesz wypełnić wszystkie, możesz
 tylko niektóre, możesz nie robić żadnego.
 • Strona musi być responsywna1
-• Strona musi być dostępna przynajmniej w podstawowym zakresie2
-, dotyczy
-
-formularzy oraz galerii
+• Strona musi być dostępna przynajmniej w podstawowym zakresie, dotyczy formularzy oraz galerii
 • Hasło użytkownika musi być przechowywane niejawnie – czyli nie plain textem,
 ale np. jako hash – ale sama metoda hashowania nie musi być bardzo ukryta
 • Walidacja nazwy użytkownika: długość od 6 do 20 znaków, wartość może
@@ -125,7 +127,7 @@ Na co będziemy zwracać uwagę:
 1 https://web.dev/responsive-web-design-basics/
 2 https://webaim.org/techniques/forms/
 
-© 2021 intive 4
+
 Zadanie powinno być wykonane do 30 listopada przed północą. Jeżeli masz jakiekolwiek
 
 pytania lub wątpliwości co do wymagań, zapraszamy do kontaktu mailowego - patronage-
