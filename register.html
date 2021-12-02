@@ -22,11 +22,11 @@
                 <ul class="wrapper">
                     <li class="form-row">
                         <label for="username">Nazwa użytkownika: </label>
-                        <input type="text" id="username" minlength="6" maxlength="20" pattern="[a-zA-Z0-9]+" required>
+                        <input type="text" id="username"  required minlength="6" maxlength="20" pattern="[a-zA-Z0-9]+">
                     </li>
                     <li class="form-row">
                         <label for="password">Hasło: </label>
-                        <input type="password" id="password" minlength="6" required>
+                        <input type="password" id="password" required minlength="6" >
                     </li>
                     <li class="form-row">
                         <label for="email">Email</label>
@@ -37,7 +37,7 @@
                         <input type="email" id="confemail" required>
                     </li>
                     <li class="form-row">
-                        <button type="submit" id="btn-register">Zarejestruj</button>
+                        <button id="btn-register">Zarejestruj</button>
                     </li>
                 </ul>
             </form>
