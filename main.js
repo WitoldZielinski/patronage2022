@@ -6,8 +6,8 @@ const confEmail = document.getElementById("confemail");
 
 
 
-function register() {
-    // e.preventDefault();
+function register(e) {
+    e.preventDefault();
 
     const userDetails = { 
         password: password.value, 
@@ -25,6 +25,7 @@ function register() {
             } else {
                 if (email.value === confEmail.value) {
                     sessionStorage.setItem(username.value, JSON.stringify(userDetails));
+                    setTimeout(function(){window.location.href = "logged.html"},1000);
                 } else {
                     confEmail.setCustomValidity('Adres mailowy został potwierdzony niepoprawnie');
                     confEmail.reportValidity();
