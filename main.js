@@ -6,35 +6,51 @@ const confEmail = document.getElementById("confemail");
 
 
 
+function checkEmail() {
+    for (let i = 0; i < sessionStorage.length; i++) {
+        const user = sessionStorage.key(i);
+        if (JSON.parse(sessionStorage.getItem(user)).email === email.value) {
+            email.setCustomValidity('Użytkownik o tym adresie email już istnieje!');
+            email.reportValidity();
+            email.value = "";
+            confEmail.value = "";
+            return false;
+        } 
+    } 
+    return true;
+}
+
+
+
 function register(e) {
     e.preventDefault();
 
-    const userDetails = { 
-        password: password.value, 
-        email: email.value 
-    };
 
     if (sessionStorage.getItem(username.value) === null) {
-        for (let i = 0; i < sessionStorage.length; i++) {
-            const user = sessionStorage.key(i);
-            if (JSON.parse(sessionStorage.getItem(user)).email === email.value) {
-                email.setCustomValidity('Użytkownik o tym adresie email już istnieje!');
-                email.reportValidity();
-                email.value = "";
-                confEmail.value = "";
+        if (checkEmail()) {
+            if (email.value === confEmail.value) {
+
+                const userDetails = { password: password.value, email: email.value };
+
+                sessionStorage.setItem(username.value, JSON.stringify(userDetails));
+                window.location.href = "logged.html"
+                return true
             } else {
-                if (email.value === confEmail.value) {
-                    sessionStorage.setItem(username.value, JSON.stringify(userDetails));
-                    setTimeout(function(){window.location.href = "logged.html"},1000);
-                } else {
-                    confEmail.setCustomValidity('Adres mailowy został potwierdzony niepoprawnie');
-                    confEmail.reportValidity();
-                }
+                confEmail.setCustomValidity('Błędnie potwierdzony email!');
+                confEmail.reportValidity();
+                return false
             }
-        }
+        } else {
+            email.setCustomValidity('Użytkownik o tym adresie email już istnieje!');
+            email.reportValidity();
+            email.value = "";
+            confEmail.value = "";
+            return false;
+        }    
     } else {
         username.setCustomValidity('Użytkownik o tej nazwie już istnieje! Wybież inną nazwę lub się zaloguj!');
         username.reportValidity();
+        return false;
     }
 }
    
