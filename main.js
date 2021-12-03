@@ -3,6 +3,7 @@ const username = document.getElementById("username");
 const password = document.getElementById("password");
 const email = document.getElementById("email");
 const confEmail = document.getElementById("confemail");
+const form = document.getElementById('form')
 
 
 
@@ -22,9 +23,8 @@ function checkEmail() {
 
 
 
-function register(e) {
-    e.preventDefault();
-
+function register() {
+    // e.preventDefault();
 
     if (sessionStorage.getItem(username.value) === null) {
         if (checkEmail()) {
@@ -54,5 +54,6 @@ function register(e) {
     }
 }
    
-
+form.addEventListener('submit', function (e) {e.preventDefault()});
 registerBtn.addEventListener('click', register);
+
